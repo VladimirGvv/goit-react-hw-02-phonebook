@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import styles from './Filter.module.scss';
 
@@ -20,3 +21,8 @@ export class Filter extends Component {
     );
   }
 }
+
+Filter.propTypes = {
+    filterByName: PropTypes.func.isRequired,
+    value: PropTypes.string.isRequired,
+};

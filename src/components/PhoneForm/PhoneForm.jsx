@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import styles from './PhoneForm.module.scss';
@@ -70,3 +71,7 @@ export class PhoneForm extends Component {
     );
   }
 }
+
+PhoneForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

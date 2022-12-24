@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 import styles from './Contacts.module.scss';
 
@@ -26,3 +27,14 @@ export class Contacts extends Component {
     );
   }
 }
+
+Contacts.propTypes = {
+  filterByName: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+  toDelete: PropTypes.func.isRequired,
+};

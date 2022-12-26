@@ -29,12 +29,6 @@ export class Contacts extends Component {
 }
 
 Contacts.propTypes = {
-  filterByName: PropTypes.arrayOf(
-    PropTypes.exact({
-      name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
-    })
-  ),
+  filterByName: PropTypes.func.isRequired,
   toDelete: PropTypes.func.isRequired,
 };
